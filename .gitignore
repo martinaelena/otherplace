@@ -1,8 +1,24 @@
 # Ignore binaries.
 /bin
 
+#Ignore PhpStorm files
 .idea/
+
+#Ignore OSX specific files
+*.DS_Store
+
+#Ignore docker file
 docker-compose.yml
+
+#Ignore files with sensitive info
 docroot/sites/*/settings.local.php
 docroot/sites/*/files
+
+#Ignore vendor files (recreate with 'composer install')
 docroot/vendor/*
+
+# Ignore paths that contain generated content.
+docroot/files/
+docroot/sites/*/files
+docroot/sites/*/private
+
