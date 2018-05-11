@@ -8,7 +8,8 @@
         "wikimedia/composer-merge-plugin": "^1.4",
         "drupal/webform": "^5.0@RC",
         "drupal/backup_migrate": "^4.0",
-        "drupal/bootstrap": "^3.11"
+        "drupal/bootstrap": "^3.11",
+        "drupal/fillpdf": "^4.5"
     },
     "replace": {
         "drupal/core": "^8.5"
