@@ -9,7 +9,9 @@
         "drupal/webform": "^5.0@RC",
         "drupal/backup_migrate": "^4.0",
         "drupal/bootstrap": "^3.11",
-        "drupal/fillpdf": "^4.5"
+        "drupal/fillpdf": "^4.5",
+        "drupal/panels": "^4.3",
+        "drupal/admin_toolbar": "^1.23"
     },
     "replace": {
         "drupal/core": "^8.5"

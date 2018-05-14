@@ -2,10 +2,12 @@ global-styling:
   css:
     theme:
       css/style.css: {}
-      'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css': {type: external}
+      '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css': {type: external}
+      '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css': {type: external}
 
   js:
     js/theme.js: {}
+    '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js': {type: external}
 
   bootstrap-scripts:
     js:
