@@ -11,7 +11,8 @@
         "drupal/bootstrap": "^3.11",
         "drupal/fillpdf": "^4.5",
         "drupal/panels": "^4.3",
-        "drupal/admin_toolbar": "^1.23"
+        "drupal/admin_toolbar": "^1.23",
+        "drupal/geolocation": "^2.0"
     },
     "replace": {
         "drupal/core": "^8.5"

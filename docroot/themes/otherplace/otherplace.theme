@@ -8,3 +8,24 @@
  */
 
 
+/**
+ * Add a node's content type as a class on the html <body> element
+ * @param $variables
+ */
+function otherplace_preprocess_html(&$variables) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if($node) {
+
+    $type = [$node->getType()];
+
+    /** @var Drupal\Core\Template\Attribute $attr */
+    $attr = $variables['attributes'];
+
+    $classes = $attr->storage()['class']->value();
+    $classes = array_merge($classes, $type);
+    $attr->setAttribute('class', $classes);
+  }
+
+}
