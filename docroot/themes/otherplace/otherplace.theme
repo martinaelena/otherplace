@@ -10,22 +10,45 @@
 
 /**
  * Add a node's content type as a class on the html <body> element
+ *
  * @param $variables
  */
 function otherplace_preprocess_html(&$variables) {
 
   $node = \Drupal::routeMatch()->getParameter('node');
 
-  if($node) {
+  if (!empty($node) && $node instanceof \Drupal\node\NodeInterface) {
 
     $type = [$node->getType()];
 
     /** @var Drupal\Core\Template\Attribute $attr */
     $attr = $variables['attributes'];
 
-    $classes = $attr->storage()['class']->value();
-    $classes = array_merge($classes, $type);
-    $attr->setAttribute('class', $classes);
+    if (!empty($attr)) {
+      $classes = $attr->storage()['class']->value();
+      $classes = array_merge($classes, $type);
+      $attr->setAttribute('class', $classes);
+    }
   }
 
+}
+
+function otherplace_preprocess_views_view_field(&$variables) {
+  $a = 1;
+}
+
+
+function otherplace_preprocess_block(&$variables) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    // You can get nid and anything else you need from the node object.
+    $nid = $node->id();
+  }
+
+  $a = 1;
+}
+
+function otherplace_theme(&$variables) {
+  $a = 1;
 }
