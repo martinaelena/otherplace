@@ -24,7 +24,7 @@ function otherplace_preprocess_html(&$variables) {
     /** @var Drupal\Core\Template\Attribute $attr */
     $attr = $variables['attributes'];
 
-    if (!empty($attr)) {
+    if (!empty($attr) && $attr instanceof Drupal\Core\Template\Attribute) {
       $classes = $attr->storage()['class']->value();
       $classes = array_merge($classes, $type);
       $attr->setAttribute('class', $classes);
